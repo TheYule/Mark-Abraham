@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="[43,)"
+license="All Rights Reserved"
+
+[[mods]]
+   modId="markabraham"
+   version="${file.jarVersion}"
+   displayName="Mark Abraham"
+   displayURL="https://santafan.club/MarkAbrahamMod"
+   logoFile="icon.png"
+   credits="Sound effects from Pixabay."
+   authors="The Yule"
+   description='''Mark Abraham
+
+https://santafan.club/MarkAbrahamMod
+'''
+
+[[dependencies.markabraham]]
+   modId="forge"
+   mandatory=true
+   versionRange="[43,)"
+   ordering="NONE"
+   side="BOTH"
+
+[[dependencies.markabraham]]
+   modId="minecraft"
+   mandatory=true
+   versionRange="[1.19.2,1.20)"
+   ordering="NONE"
+   side="BOTH"

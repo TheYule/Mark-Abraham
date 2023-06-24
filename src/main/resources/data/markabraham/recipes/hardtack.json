@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "minecraft:wheat"
+  },
+  "result": "markabraham:hardtack",
+  "experience": 1.0,
+  "cookingtime": 100
+}

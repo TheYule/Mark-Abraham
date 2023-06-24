@@ -1,0 +1,16 @@
+{
+  "block.markabraham.markabraham_block": "Mark Abraham Block",
+  "item.markabraham.markabraham_block": "Mark Abraham Block",
+  "item.markabraham.darksaber": "Darksaber",
+  "item.markabraham.theyulelightsaber": "The Yule Lightsaber",
+  "item.markabraham.whitelightsaber": "White Lightsaber",
+  "item.markabraham.redlightsaber": "Red Lightsaber",
+  "item.markabraham.greenlightsaber": "Green Lightsaber",
+  "item.markabraham.bluelightsaber": "Blue Lightsaber",
+  "item.markabraham.ballsack": "Ballsack",
+  "item.markabraham.hardtack": "Hardtack",
+  "itemGroup.markabraham": "Mark Abraham",
+  "itemGroup.lightsabers": "Lightsabers",
+  "sounds.markabraham.lightsaber": "Lightsaber Swings",
+  "sounds.markabraham.hardtack": "Hardtack Crunches"
+}

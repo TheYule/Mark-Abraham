@@ -1,0 +1,14 @@
+{
+  "lightsaber": {
+    "subtitle": "sounds.markabraham.lightsaber",
+    "sounds": [
+      "markabraham:lightsaber"
+    ]
+  },
+  "hardtack": {
+    "subtitle": "sounds.markabraham.hardtack",
+    "sounds": [
+      "markabraham:hardtack"
+    ]
+  }
+}
