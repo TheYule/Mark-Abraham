@@ -2,6 +2,7 @@ package club.santafan.markabraham;
 
 import club.santafan.markabraham.renderer.ShitProjectileRenderer;
 import club.santafan.markabraham.util.Events;
+import club.santafan.markabraham.world.MarkLandDimension;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.level.block.ComposterBlock;
@@ -21,13 +22,14 @@ import static club.santafan.markabraham.init.ConfiguredFeaturesInit.CONFIGURED_F
 import static club.santafan.markabraham.init.EntityInit.ENTITY_TYPES;
 import static club.santafan.markabraham.init.EntityInit.SHIT_PROJECTILE_ENTITY;
 import static club.santafan.markabraham.init.ItemInit.*;
+import static club.santafan.markabraham.init.POIsInit.POIS;
 import static club.santafan.markabraham.init.PlacedFeaturesInit.PLACED_FEATURES;
 import static club.santafan.markabraham.init.SoundInit.SOUND_EVENTS;
 
 @Mod(MarkAbraham.MODID)
 public class MarkAbraham {
     public static final String MODID = "markabraham";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public MarkAbraham() {
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -38,7 +40,10 @@ public class MarkAbraham {
         ENTITY_TYPES.register(bus);
         ITEMS.register(bus);
         PLACED_FEATURES.register(bus);
+        POIS.register(bus);
         SOUND_EVENTS.register(bus);
+
+        MarkLandDimension.register();
 
         MinecraftForge.EVENT_BUS.register(this);
         MinecraftForge.EVENT_BUS.register(Events.class);

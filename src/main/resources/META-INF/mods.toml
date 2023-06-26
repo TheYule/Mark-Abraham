@@ -4,7 +4,7 @@ license="All Rights Reserved"
 
 [[mods]]
    modId="markabraham"
-   version="2.0" # ${file.jarVersion}
+   version="3.0" # ${file.jarVersion}
    displayName="Mark Abraham"
    displayURL="https://santafan.club/MarkAbrahamMod"
    logoFile="icon.png"

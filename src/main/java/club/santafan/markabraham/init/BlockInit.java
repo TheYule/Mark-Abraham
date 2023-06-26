@@ -1,6 +1,7 @@
 package club.santafan.markabraham.init;
 
 import club.santafan.markabraham.MarkAbraham;
+import club.santafan.markabraham.block.MarkLandPortalBlock;
 import club.santafan.markabraham.world.ShitTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -18,14 +19,20 @@ public class BlockInit {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MarkAbraham.MODID);
 
     public static final RegistryObject<Block> MARKABRAHAM_BLOCK = BLOCKS.register("markabraham_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD)
+            .lightLevel((state) -> 5)
+            .sound(SoundInit.MARKABRAHAM_BLOCK_SOUNDS)));
+    public static final RegistryObject<Block> COMPRESSED_MARKABRAHAM_BLOCK = BLOCKS.register("compressed_markabraham_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD)
+            .lightLevel((state) -> 10)
+            .sound(SoundInit.MARKABRAHAM_BLOCK_SOUNDS)));
+    public static final RegistryObject<Block> DOUBLE_COMPRESSED_MARKABRAHAM_BLOCK = BLOCKS.register("double_compressed_markabraham_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD)
             .lightLevel((state) -> 15)
             .sound(SoundInit.MARKABRAHAM_BLOCK_SOUNDS)));
     public static final RegistryObject<Block> JOEBALEM_BLOCK = BLOCKS.register("joebalem_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD)
-            .lightLevel((state) -> 15)));
+            .lightLevel((state) -> 10)));
     public static final RegistryObject<Block> BITCH_BLOCK = BLOCKS.register("bitch_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD)
-            .lightLevel((state) -> 15)));
+            .lightLevel((state) -> 10)));
     public static final RegistryObject<Block> TYWERDEBOUS_BLOCK = BLOCKS.register("tywerdebous_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD)
-            .lightLevel((state) -> 15)));
+            .lightLevel((state) -> 10)));
     public static final RegistryObject<Block> SHIT_BLOCK = BLOCKS.register("shit_block", () -> new Block(BlockBehaviour.Properties.copy(Blocks.HONEY_BLOCK)
             .instabreak()
             .sound(SoundInit.SHIT_BLOCK_SOUNDS)));
@@ -37,4 +44,6 @@ public class BlockInit {
             return false;
         }
     });
+
+    public static final RegistryObject<Block> MARK_LAND_PORTAL = BLOCKS.register("mark_land_portal", MarkLandPortalBlock::new);
 }
