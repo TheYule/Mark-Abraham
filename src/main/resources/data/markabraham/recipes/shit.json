@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "markabraham:shit_block"
+    }
+  ],
+  "result": {
+    "item": "markabraham:shit",
+    "count": 4
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "markabraham:markabraham_block"
+    },
+    {
+      "item": "markabraham:markabraham_block"
+    },
+    {
+      "item": "markabraham:markabraham_block"
+    },
+    {
+      "item": "markabraham:markabraham_block"
+    },
+    {
+      "item": "markabraham:joebalem_block"
+    },
+    {
+      "item": "markabraham:joebalem_block"
+    },
+    {
+      "item": "markabraham:joebalem_block"
+    },
+    {
+      "item": "markabraham:joebalem_block"
+    },
+    {
+      "item": "minecraft:cobblestone"
+    }
+  ],
+  "result": {
+    "item": "markabraham:bitch_block",
+    "count": 4
+  }
+}

@@ -1,13 +1,12 @@
 package club.santafan.markabraham;
 
-import club.santafan.markabraham.init.SoundInit;
+import club.santafan.markabraham.renderer.ShitProjectileRenderer;
+import club.santafan.markabraham.util.Events;
 import com.mojang.logging.LogUtils;
-import net.minecraft.sounds.SoundSource;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.level.Level;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -18,7 +17,11 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
 import static club.santafan.markabraham.init.BlockInit.BLOCKS;
-import static club.santafan.markabraham.init.ItemInit.ITEMS;
+import static club.santafan.markabraham.init.ConfiguredFeaturesInit.CONFIGURED_FEATURES;
+import static club.santafan.markabraham.init.EntityInit.ENTITY_TYPES;
+import static club.santafan.markabraham.init.EntityInit.SHIT_PROJECTILE_ENTITY;
+import static club.santafan.markabraham.init.ItemInit.*;
+import static club.santafan.markabraham.init.PlacedFeaturesInit.PLACED_FEATURES;
 import static club.santafan.markabraham.init.SoundInit.SOUND_EVENTS;
 
 @Mod(MarkAbraham.MODID)
@@ -31,27 +34,40 @@ public class MarkAbraham {
         bus.addListener(this::commonSetup);
 
         BLOCKS.register(bus);
+        CONFIGURED_FEATURES.register(bus);
+        ENTITY_TYPES.register(bus);
         ITEMS.register(bus);
+        PLACED_FEATURES.register(bus);
         SOUND_EVENTS.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
+        MinecraftForge.EVENT_BUS.register(Events.class);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        LOGGER.info("Mark Abraham has initiated.");
+        LOGGER.info("Mark Abraham mod has initiated.");
     }
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
-        LOGGER.info("Mark Abraham server has initiated.");
+        LOGGER.info("Mark Abraham mod server has initiated.");
     }
 
     @Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event)
-        {
-            LOGGER.info("Mark Abraham client has initiated.");
+        public static void onClientSetup(FMLClientSetupEvent event) {
+            EntityRenderers.register(SHIT_PROJECTILE_ENTITY.get(), ShitProjectileRenderer::new);
+
+            event.enqueueWork(() -> {
+                ComposterBlock.COMPOSTABLES.put(SHIT_BLOCK.get(), 1f);
+                ComposterBlock.COMPOSTABLES.put(SHIT_PLANT.get(), 1f);
+                ComposterBlock.COMPOSTABLES.put(SHIT.get(), 1f);
+                ComposterBlock.COMPOSTABLES.put(BALLSACK.get(), 1f);
+                ComposterBlock.COMPOSTABLES.put(HARDTACK.get(), .3f);
+            });
+
+            LOGGER.info("Mark Abraham mod client has initiated.");
         }
     }
 }

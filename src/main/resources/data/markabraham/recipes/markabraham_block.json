@@ -1,14 +1,13 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "##",
-    "##"
-  ],
-  "key": {
-    "#": {
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:dirt"
+    },
+    {
       "item": "minecraft:dirt"
     }
-  },
+  ],
   "result": {
     "item": "markabraham:markabraham_block"
   }

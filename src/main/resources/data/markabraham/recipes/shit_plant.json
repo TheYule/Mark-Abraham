@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#@#",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "markabraham:shit"
+    },
+    "@": {
+      "item": "markabraham:shit_block"
+    }
+  },
+  "result": {
+    "item": "markabraham:shit_plant"
+  }
+}

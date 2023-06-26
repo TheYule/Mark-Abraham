@@ -10,5 +10,17 @@
     "sounds": [
       "markabraham:hardtack"
     ]
+  },
+  "fart": {
+    "subtitle": "sounds.markabraham.fart",
+    "sounds": [
+      "markabraham:fart"
+    ]
+  },
+  "diarrhea": {
+    "subtitle": "sounds.markabraham.diarrhea",
+    "sounds": [
+      "markabraham:diarrhea"
+    ]
   }
 }
