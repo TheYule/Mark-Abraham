@@ -5,10 +5,7 @@ import club.santafan.markabraham.init.SoundInit;
 import club.santafan.markabraham.util.LightsaberTier;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.SwordItem;
+import net.minecraft.world.item.*;
 import org.jetbrains.annotations.NotNull;
 
 public class LightsaberItem extends SwordItem {
@@ -24,7 +21,9 @@ public class LightsaberItem extends SwordItem {
     }
 
     public LightsaberItem(LightsaberTier tier, int damage, float attackSpeed, Properties properties) {
-        super(tier, damage, attackSpeed, properties.tab(ItemInit.MarkAbrahamTabInstance));
+        super(tier, damage, attackSpeed, properties
+                .tab(ItemInit.MarkAbrahamTabInstance)
+                .rarity(Rarity.EPIC));
     }
 
     public boolean hurtEnemy(@NotNull ItemStack item, @NotNull LivingEntity entity, @NotNull LivingEntity player) {

@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "markabraham:blocks/compressed_markabraham_block"
+  }
+}

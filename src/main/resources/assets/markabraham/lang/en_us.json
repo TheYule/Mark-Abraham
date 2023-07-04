@@ -1,5 +1,8 @@
 {
   "block.markabraham.markabraham_block": "Mark Abraham Block",
+  "block.markabraham.compressed_markabraham_block": "Compressed Mark Abraham Block",
+  "block.markabraham.double_compressed_markabraham_block": "Double Compressed Mark Abraham Block",
+  "block.markabraham.mark_land_portal": "Mark Land Portal",
   "block.markabraham.joebalem_block": "Joe Balem Block",
   "block.markabraham.bitch_block": "Bitch Block",
   "block.markabraham.tywerdebous_block": "Tywerdebous Block",
@@ -7,6 +10,9 @@
   "block.markabraham.shit_plant": "Shit Plant",
   "entity.markabraham.shit_projectile": "Shit Projectile",
   "item.markabraham.markabraham_block": "Mark Abraham Block",
+  "item.markabraham.compressed_markabraham_block": "Mark Abraham Block",
+  "item.markabraham.double_compressed_markabraham_block": "Mark Abraham Block",
+  "item.markabraham.mark_land_portal": "Mark Land Portal",
   "item.markabraham.joebalem_block": "Joe Balem Block",
   "item.markabraham.bitch_block": "Bitch Block",
   "item.markabraham._block": "Tywerdebous Block",
